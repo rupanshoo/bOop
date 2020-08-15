@@ -63,6 +63,7 @@ class _gridState extends State<grid> {
                 'json_data/DogBreedDb.json'),
             builder: (context, snapshot){
               var breeds = jsonDecode(snapshot.data.toString());
+              print("Breeds:$breeds");
 
 
               return new GridView.builder(

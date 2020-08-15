@@ -6,16 +6,6 @@ import 'package:material_design_icons_flutter/material_design_icons_flutter.dart
 
 
 
-class SplashScreen extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,      //so that the debug banner on the top right corner doesn't show
-      home:Splash(),
-      routes: {"home" : (context) => Home()},
-    );
-  }
-}
 
 class Splash extends StatefulWidget {
   @override
@@ -32,7 +22,7 @@ class _SplashState extends State<Splash>
   {
     await Future.delayed(Duration(seconds: DELAY_SECONDS), (){});
 
-    Navigator.pushNamed(context, "home");
+    Navigator.pushNamed(context, "/");
   }
 
   @override
