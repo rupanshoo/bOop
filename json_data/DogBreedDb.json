@@ -1,0 +1,373 @@
+[
+    {
+        "name" : "Afador",
+        "origin" : "Alaska",
+        "suitable_conditions" : "Not apartment friendly, need colder climate.",
+        "power_fuel" : "Healthy diet of high-quality kibble",
+        "daily_workout" : "Long walks and running",
+        "common_ailments" : "Dysplasia and bloat",
+        "speciality" : "We are a blend of Afghan Hound and Labrador Retriever, very energetic and affectionate",
+        "annoying_habits" : "Very energetic - can be a handful sometimes",
+        "special_appearance" : "Our resounding bark makes us great Watchdogs!"
+    },
+
+    {
+        "name" : "American Bulldog",
+        "origin" : "United States",
+        "suitable_conditions" : "We need large spaces so that we can run around!",
+        "power_fuel" : "A balanced diet",
+        "daily_workout" : "A lot of exercise and running",
+        "common_ailments" : "hypothyroidism and cataracts.",
+        "speciality" : "We can jump up to six feet in air!",
+        "annoying_habits" : "We may get aggressive sometimes.",
+        "special_appearance" : "The animated character Luiz from Rio movie!"
+    },
+
+    {
+        "name" : "Beagle",
+        "origin" : "United Kingdom",
+        "suitable_conditions" : "We are apartment friendly dogs!",
+        "power_fuel" : "Dry dog food!",
+        "daily_workout" : "We need at least an hour of vigorous exercise ",
+        "common_ailments" : "Obesity",
+        "speciality" : "We love socializing!",
+        "annoying_habits" : "We can become destructive if we don't exercise",
+        "special_appearance" : "Watch 'The Beagle Purple'! "
+    },
+
+    {
+        "name" : "Bichon Frise",
+        "origin" : "Europe, Canada",
+        "suitable_conditions" : "Relatively cold climate",
+        "power_fuel" : "High quality, breed appropriate food",
+        "daily_workout" : "Not much exercise needed",
+        "common_ailments" : "Skin disease",
+        "speciality" : "We are known as the Toy dog.",
+        "annoying_habits" : "Our coat needs a lot of care!",
+        "special_appearance" : "We have many dog shows! Model Dogs:)"
+    },
+
+    {
+        "name" : "Cavapoo",
+        "origin" : "Australia",
+        "suitable_conditions" : "We are apartment friendly",
+        "power_fuel" : "We require a healthy diet of high-quality dry kibble. ",
+        "daily_workout" : " We don't require extensive exercise",
+        "common_ailments" : "Ear infection and teeth problems",
+        "speciality" : "We are a cross between Cavalier King Charles Spaniel and the Poodle.",
+        "annoying_habits" : "We like to be with our owners all the time!",
+        "special_appearance" : "We are the most popular designer dog breed!"
+    },
+
+    {
+        "name" : "Cockalier",
+        "origin" : "USA",
+        "suitable_conditions" : "A place to run around and spend or energy",
+        "power_fuel" : "Dry dog food!",
+        "daily_workout" : "We need extensive daily exercise!",
+        "common_ailments" : "Ear and eye infections",
+        "speciality" : "We are a cross breed!",
+        "annoying_habits" : "We sometimes chew and play-bite!",
+        "special_appearance" : "We love water games and swimming!"
+    },
+
+    {
+        "name" : "Dalmatian",
+        "origin" : "Dalmatia, Austria" ,
+        "suitable_conditions" : "A place where we can run around and play!",
+        "power_fuel" : "We require large amount of protein in our diet! Avoid purine.",
+        "daily_workout" : "We need lots of exercise- long walks or runs!",
+        "common_ailments" : "deafness, allergies and urinary stones.",
+        "speciality" : "We have been circus performers, hunters and firehouse mascots.",
+        "annoying_habits" : "We are attention seeking dogs and shed heavily",
+        "special_appearance" : "Disney's 101 Dalmatians! Yes, we are movie stars!"
+    },
+
+    {
+        "name" : "Deutscher Wachtelhund",
+        "origin" : "Germany",
+        "suitable_conditions" : "Apartment Dogs and a social atmosphere",
+        "power_fuel" : "We have unique digestive needs!",
+        "daily_workout" : "Play time in the park and walks several times a day!",
+        "common_ailments" : "crooked feet, ear infections, skin and ear infections",
+        "speciality" : "We love water!",
+        "annoying_habits" : "We take time to train!",
+        "special_appearance" : "We are extremely photogenic!"
+    },
+
+    {
+        "name" : "English Setter",
+        "origin" : "England",
+        "suitable_conditions" : "We need space to run around and exercise!",
+        "power_fuel" : "A balanced diet!",
+        "daily_workout" : "Playing in a lawn and running around!",
+        "common_ailments" : "Dysplasia, Deafness",
+        "speciality" : "We are great family companions",
+        "annoying_habits" : "We get bored and start chewing things if we don;t exercise.",
+        "special_appearance" : "We serve as hunting dogs!"
+    },
+
+    {
+        "name" : "Eurasier",
+        "origin" : "Germany",
+        "suitable_conditions" : "We love being in a cold climate!",
+        "power_fuel" : "A balanced diet!",
+        "daily_workout" : "We are playful and enjoy some outdoor time.",
+        "common_ailments" : "Dysplasia and patella luxation",
+        "speciality" : "We are great watch-dogs!",
+        "annoying_habits" : "We are seasonal shredders!",
+        "special_appearance" : "You might see us playing with children!"
+    },
+
+    {
+        "name" : "French Bulldog",
+        "origin" : "France" ,
+        "suitable_conditions" : "We cannot tolerate extremely hot or cold weather.",
+        "power_fuel" : "Meat based food!",
+        "daily_workout" : "Do not require a lot of outdoor exercise.",
+        "common_ailments" : "Chronic allergies, cleft palate, heatstroke",
+        "speciality" : "We are excellent watchdogs and show dogs!",
+        "annoying_habits" : "We snort,snuffle and snore a lot",
+        "special_appearance" : "We have starred in a movie with RDJ - Due Date and as Jay's dog in Modern Family!"
+    },
+
+    {
+        "name" : "Fox Terrier",
+        "origin" : "England",
+        "suitable_conditions" : "Cold climate",
+        "power_fuel" : "A balanced diet",
+        "daily_workout" : "Long walks and daily running",
+        "common_ailments" : "Cardiac diseases",
+        "speciality" : "Originally our job was to drive foxes out of their hiding places",
+        "annoying_habits" : "We bark a lot and are high-pitched",
+        "special_appearance" : "It's a Dog's Life (1955)"
+    },
+
+    {
+        "name" : "German Shepherd",
+        "origin" : "Germany" ,
+        "suitable_conditions" : "We are apartment friendly but do need a lawn!",
+        "power_fuel" : "Grain- free food",
+        "daily_workout" : "We love taking long walks and playing! We love the outdoors!",
+        "common_ailments" : "Dysplasia and arthritis. Talk to our Vet for prevention supplements!",
+        "speciality" : "We are good with kids, easy to train and groom!",
+        "annoying_habits" : "Our barking, howling, shedding and protective nature.  ",
+        "special_appearance" : "Search and rescue dogs, police dogs, guide dogs, watch dogs and guard dogs."
+    },
+
+    {
+        "name" : "Great Dane",
+        "origin" : "Germany",
+        "suitable_conditions" : "A lot of space!!",
+        "power_fuel" : "High quality dog food!",
+        "daily_workout" : "Long walks and a large yard to play",
+        "common_ailments" : "Bloat, dysplasia, heart disease",
+        "speciality" : "We are quite gentle",
+        "annoying_habits" : "We might become unruly!",
+        "special_appearance" : "We are the 'Apollo of Dogs'!"
+    },
+
+    {
+        "name" : "Golden Retriever",
+        "origin" : "UK, Scotland",
+        "suitable_conditions" : "Rural environments and homes with yards!",
+        "power_fuel" : "Balanced ratio of calcium and phosphorous, protein, vitamins and minerals",
+        "daily_workout" : "We need to exercise for more than an hour a day!",
+        "common_ailments" : "Dysplasia, skin problems",
+        "speciality" : "We are super intelligent!",
+        "annoying_habits" : "We are not the 'calm house pet' kind",
+        "special_appearance" : "I starred with Akshay Kumar in 'Entertainment'!"
+    },
+
+    {
+        "name" : "Havanese",
+        "origin" : "Cuba",
+        "suitable_conditions" : "We are the perfect apartment dog",
+        "power_fuel" : "Rich in protein and healthy fats but made with highly digestible ingredients.",
+        "daily_workout" : "We love walks!",
+        "common_ailments" : "Cataracts, deafness",
+        "speciality" : "We are highly adaptable!",
+        "annoying_habits" : "We bark a lot!",
+        "special_appearance" : "You might see us on the street, we are the ideal city doggie!"
+    },
+
+    {
+        "name" : "Irish Wolfhound",
+        "origin" : "Ireland",
+        "suitable_conditions" : "We prefer cooler climates!",
+        "power_fuel" : "Protein and calcium",
+        "daily_workout" : "Minimum 2 hours of exercise!",
+        "common_ailments" : "vWD, PRA, CHD",
+        "speciality" : "We are super friendly!",
+        "annoying_habits" : "We sometimes have a bad breath",
+        "special_appearance" : "We are great show dogs!"
+    },
+
+    {
+        "name" : "Jack-A-Poo",
+        "origin" : "United States",
+        "suitable_conditions" : "We are apartment friendly!",
+        "power_fuel" : "A balanced diet, with lesser carbs!",
+        "daily_workout" : "At least an hour of playing and running!",
+        "common_ailments" : "Epilepsy",
+        "speciality" : "We are a new hybrid - Jack Russell Terrier X Miniature Poodle",
+        "annoying_habits" : "We get annoyed when we are bored",
+        "special_appearance" : "We might look like a soft toy to you!"
+    },
+
+    {
+        "name" : "Japanese Chin",
+        "origin" : "Japan",
+        "suitable_conditions" : "We don't do well in extreme climates",
+        "power_fuel" : "A grain-free formulation",
+        "daily_workout" : "Short walks are enough for us!",
+        "common_ailments" : "Cataract, heart murmur, KCS",
+        "speciality" : "Our ability to grow a beard",
+        "annoying_habits" : "We might be stubborn sometimes",
+        "special_appearance" : "We are good watch dogs"
+    },
+
+    {
+        "name" : "Kai Ken",
+        "origin" : "Japan",
+        "suitable_conditions" : "We love cold climates",
+        "power_fuel" : "Dry dog food!",
+        "daily_workout" : "A short 30 min long walk or a brisk jog",
+        "common_ailments" : "Allergies, eye and hip issues",
+        "speciality" : "We are also known as the 'Tiger Dog'",
+        "annoying_habits" : "We bark a lot!",
+        "special_appearance" : "You can see us in a few animes!"
+    },
+
+    {
+        "name" : "Komondor",
+        "origin" : "Hungary",
+        "suitable_conditions" : "We love cold climate!",
+        "power_fuel" : "Meat and vegetables",
+        "daily_workout" : "We require very little exercise",
+        "common_ailments" : "Dental diseases",
+        "speciality" : "We are great show dogs!",
+        "annoying_habits" : "We can be quite lazy",
+        "special_appearance" : "You might confuse us for a mop xD"
+    },
+
+    {
+        "name" : "Labrador",
+        "origin" : "Canada",
+        "suitable_conditions" : "Indian climate is the best for us!",
+        "power_fuel" : "We need a balanced diet!",
+        "daily_workout" : "We need over 2 hours of exercise everyday!",
+        "common_ailments" : "Joint problems, ear infections",
+        "speciality" : "We are water lovers!",
+        "annoying_habits" : "We bark and chew stuff a lot!",
+        "special_appearance" : "You can see us with Jennifer Aniston in Marley & Me!"
+    },
+
+    {
+        "name" : "Maltese",
+        "origin" : "Mediterranean Basin",
+        "suitable_conditions" : "Mediterranean climate with hot summers and mild winters!",
+        "power_fuel" : "Proteins and ground up bones with vitamins and minerals",
+        "daily_workout" : "We need 30 to 40 mins of exercise daily!",
+        "common_ailments" : "Skin, leg and bladder stone problems",
+        "speciality" : "Our fur makes us look like a model!",
+        "annoying_habits" : "We are prone to separation anxiety",
+        "special_appearance" : "We are great show dogs!"
+    },
+
+    {
+        "name" : "Poodle",
+        "origin" : "Germany, France",
+        "suitable_conditions" : "We need cooler climates to be comfortable!",
+        "power_fuel" : "We need a balanced diet!",
+        "daily_workout" : "An hour of playing fetch!",
+        "common_ailments" : "Addison's disease",
+        "speciality" : "We are energetic dogs!",
+        "annoying_habits" : "Our squeaky bark ",
+        "special_appearance" : "You might have seen us in 'The Secret Life of Pets'!"
+    },
+
+    {
+        "name" : "Pug",
+        "origin" : "China" ,
+        "suitable_conditions" : "Indoors, especially not in extremely hot or cold weather ",
+        "power_fuel" : "Dry dog food for small breeds",
+        "daily_workout" : "Shorter walks and playtime",
+        "common_ailments" : "Prone to skin, eye and respiratory issues.",
+        "speciality" : "We are intelligent, playful and funny dogs!",
+        "annoying_habits" : "We shed a lot, wheeze, snort and snore loudly too and we are greedy eaters! ",
+        "special_appearance" : "You might have seen me in Hutch and Vodafone advertisements!"
+    },
+
+    {
+        "name" : "Pomeranian",
+        "origin" : "Germany, Poland",
+        "suitable_conditions" : "We need cooler climates",
+        "power_fuel" : "A balanced diet!",
+        "daily_workout" : "Around 30 mins of exercise",
+        "common_ailments" : "Luxating patella and tracheal collapse",
+        "speciality" : "We are amazing therapy dogs",
+        "annoying_habits" : "Our squeaky bark",
+        "special_appearance" : "You might have seen us in 'The Secret Life of Pets'!"
+    },
+
+    {
+        "name" : "Saint Bernard",
+        "origin" : "Switzerland, Italy",
+        "suitable_conditions" : "We need colder climates!",
+        "power_fuel" : "We need a lot of protein in our diet!",
+        "daily_workout" : "We need a lot of play time and walks everyday!",
+        "common_ailments" : "DCM",
+        "speciality" : "We can sense avalanches approaching!",
+        "annoying_habits" : "We bark loudly and take up space ",
+        "special_appearance" : "We are great search and rescue dogs and also serve in the police force!"
+    },
+
+    {
+        "name" : "Siberian Husky",
+        "origin" : "Siberia",
+        "suitable_conditions" : "We need a cold climate!",
+        "power_fuel" : "Good quality dog food!",
+        "daily_workout" : "We need to exercise for minimum 2 hrs everyday!",
+        "common_ailments" : "Bacterial and viral infections",
+        "speciality" : "We have great sledge-pulling skills",
+        "annoying_habits" : "We do have preying instincts!",
+        "special_appearance" : "Disney's Togo!"
+    },
+
+    {
+        "name" : "Shiba Inu",
+        "origin" : "Japan" ,
+        "suitable_conditions" : "We are apartment friendly dogs!",
+        "power_fuel" : "High-quality dog food",
+        "daily_workout" : "Regular walks!",
+        "common_ailments" : "Kneecap issues and hip dysplasia are common.",
+        "speciality" : "We are great companion dogs!",
+        "annoying_habits" : "We are possessive of our toys and we shed a lot!",
+        "special_appearance" : "We are the meme dogs!"
+    },
+
+    {
+        "name" : "Texas Heeler",
+        "origin" : "United States",
+        "suitable_conditions" : "We can survive in warm climates!",
+        "power_fuel" : "We need a balanced diet!",
+        "daily_workout" : "An hour of exercise and walks!",
+        "common_ailments" : "Dysplasia, cataracts",
+        "speciality" : "We are great apartment dogs!",
+        "annoying_habits" : "We shed a lot!",
+        "special_appearance" : "You can see us in Mad Max!"
+    },
+
+    {
+        "name" : "Valley Bulldog",
+        "origin" : "Canada",
+        "suitable_conditions" : "We get uncomfortable in extreme climates",
+        "power_fuel" : "We need a balanced diet!",
+        "daily_workout" : "We need long, brisk walks!",
+        "common_ailments" : "Skin problems and breathing difficulty",
+        "speciality" : "We are great playmates!",
+        "annoying_habits" : "We take time to train",
+        "special_appearance" : "We are great models!"
+    }
+]
