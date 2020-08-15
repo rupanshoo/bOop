@@ -54,8 +54,8 @@ flutter:
   # To add assets to your application, add an assets section, like this:
   assets:
     - images/background1.jpg
-    - images/dogpng.png
     - images/icon.png
+    - images/Dalmatian.jpeg
     - json_data/boopNames.json
     - json_data/DogBreedDb.json
 
