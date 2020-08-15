@@ -49,19 +49,13 @@ class _ListViewBuilderState extends State<ListViewBuilder> {
       backgroundColor: Colors.transparent,
       body: new Container(
         child: Center(
-          child: new FutureBuilder(
-            future: DefaultAssetBundle.of(context).loadString(
-                'json_data/boopNames.json'),
-            builder: (context, snapshot) {
-
+          child: FutureBuilder(builder: (context, snapshot) {
               //Decode json
-              var myData = jsonDecode(snapshot.data.toString());
+              var myData = json.decode(snapshot.data.toString());
+              return ListView.builder(
 
-
-
-              return ListView.builder(   //mine
-                itemCount: myData.length,
                 itemBuilder: (BuildContext context, int index){
+
                   return Padding(padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
                     child: Container(
                       decoration: BoxDecoration(
@@ -85,12 +79,13 @@ class _ListViewBuilderState extends State<ListViewBuilder> {
                           ),
                         ],
                       ),
-
                     ),
                   );
                 },
+                itemCount: myData.length,
               );
-            },
+            }, future: DefaultAssetBundle.of(context).loadString('json_data/boopNames.json')
+
           ),
         ),
       ),

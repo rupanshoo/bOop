@@ -63,7 +63,7 @@ class _gridState extends State<grid> {
                 'json_data/DogBreedDb.json'),
             builder: (context, snapshot){
               var breeds = jsonDecode(snapshot.data.toString());
-              print("Breeds:$breeds");
+              //print("Breeds:$breeds");
 
 
               return new GridView.builder(
@@ -106,7 +106,7 @@ class _gridState extends State<grid> {
                                 borderRadius: BorderRadius.circular(10),
                               ),
                               height: 600,
-                              margin: EdgeInsets.only(left: 5, right:5, top: 5, bottom: 5),
+                              margin: EdgeInsets.only(left: 5, right:5, top: 5),
                               child: Column(
                                 children: <Widget>[
                                   new Text("\n" + breeds[index]['name'],

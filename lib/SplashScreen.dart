@@ -1,7 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'dart:async';
-import 'package:boop_app/Home.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 
 
@@ -59,9 +58,7 @@ class _SplashState extends State<Splash>
             children: <Widget>[
               Stack(
                 children: <Widget>[
-                  Expanded(
-                    flex: 2,
-                    child: Container(
+                    Container(
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: <Widget>[
@@ -102,8 +99,6 @@ class _SplashState extends State<Splash>
                         ],
                       ),
                     ),
-                  ),
-
                 ],
               )
             ],
