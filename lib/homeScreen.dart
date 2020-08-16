@@ -119,28 +119,39 @@ class _gridState extends State<grid> {
                             color: Color(0xff622F74),
                           ),
                           alignment: Alignment.center,
-                          child: Center(
-                            child: Column(
-                              children: <Widget>[
-                                //Text("    ",
-                                  //style: TextStyle(fontSize: 12),),
-                                FittedBox(
-                                  fit: BoxFit.cover,
-                                  child: Icon(Icons.pets,
-                                    size: 50,
-                                    color: Colors.cyan,),
-                                ),
+                          child: Padding(
+                            padding: const EdgeInsets.all(8.0),
+                            child: Center(
+                              child: Column(
+                                children: <Widget>[
+                                  //Text("    ",
+                                    //style: TextStyle(fontSize: 12),),
+                                  // Icon(Icons.pets,
+                                  //   size: 50,
+                                  //   color: Colors.cyan,),
 
+                                  SizedBox(height: 10,),
+                                  CircleAvatar(
+                                    backgroundImage: NetworkImage(
+                                      URLList[index]
+                                    ),
+                                    radius: 22,
 
-                                //Text("    ",
-                                  //style: TextStyle(fontSize: 12),),
+                                  ),
 
-                                new Text(breeds[index]['name'],
-                                  style: TextStyle(
-                                    fontSize: 16,
-                                    color: Colors.white,
-                                  ),),
-                              ],
+                                  Padding(
+                                    padding: const EdgeInsets.all(5.0),
+                                    child: Text(breeds[index]['name'],
+                                      style: TextStyle(
+                                        fontSize: 14,
+                                        color: Colors.white,
+                                      ),
+                                      textAlign: TextAlign.center,
+                                      ),
+                                  ),
+                                    
+                                ],
+                              ),
                             ),
                           )
                         )
@@ -163,56 +174,68 @@ class _gridState extends State<grid> {
                               width: MediaQuery.of(context).size.width*0.8,
                               height: MediaQuery.of(context).size.height*0.8,
                               margin: EdgeInsets.only(left: 5, right:5, top: 5, bottom: 5),
-                              child: Column(
-                                children: <Widget>[
-                                  new Text("\n" + breeds[index]['name'],
-                                    style: TextStyle(
-                                      fontSize: 25,
-                                      fontWeight: FontWeight.bold,
+                              child: Padding(
+                                padding: const EdgeInsets.fromLTRB(10,10,10,0),
+                                child: SingleChildScrollView(
+                                  child: Column(
+                                    children: <Widget>[
+                                      new Text("\n" + breeds[index]['name'],
+                                        style: TextStyle(
+                                          fontSize: 25,
+                                          fontWeight: FontWeight.bold,
+                                        ),
+                                      ),
+
+                                      // new Icon(
+                                      //   Icons.pets,
+                                      //   color: Colors.red,
+                                      // ),
+                                      CircleAvatar(
+                                    backgroundImage: NetworkImage(
+                                      URLList[index]
                                     ),
+                                    radius: 40,
+                                    
                                   ),
 
-                                  new Icon(
-                                    Icons.pets,
-                                    color: Colors.red,
+                                      new Text("\nOrigin: " + breeds[index]['origin'] + "\n"),
+                                      new Text("Thriving Conditions: " + breeds[index]['suitable_conditions'] +"\n"),
+                                      new Text("Power Fuel: " + breeds[index]['power_fuel'] + "\n"),
+                                      new Text("Daily Workout: " + breeds[index]['daily_workout'] + "\n"),
+                                      new Text("Common Ailments: " + breeds[index]['common_ailments'] + "\n"),
+                                      new Text("Speciality: " + breeds[index]['speciality'] + "\n"),
+                                      new Text("Annoying Habits: " + breeds[index]['annoying_habits'] + "\n"),
+                                      new Text("Special Appearance: " + breeds[index]['special_appearance'] + "\n\n"),
+
+
+
+                                      new RaisedButton(
+                                        child: new Text("OK"),
+                                        onPressed: () {
+                                          Navigator.of(context).pop();
+                                        },
+                                      ),
+
+                                      new RaisedButton(
+                                        child: Text("Search"),
+                                        onPressed: () {
+                                          _launchURL(URLList[index]);
+                                        },
+                                      ),
+
+                                      new Text("Want to see what I look like? Search!!",
+                                        style: TextStyle(
+                                            fontSize: 12
+                                        ),
+                                      ),
+
+                                      Padding(
+                                        padding: EdgeInsets.only(top:50, left: 50, right: 50),
+                                      ),
+
+                                    ],
                                   ),
-
-                                  new Text("\nOrigin: " + breeds[index]['origin'] + "\n"),
-                                  new Text("Thriving Conditions: " + breeds[index]['suitable_conditions'] +"\n"),
-                                  new Text("Power Fuel: " + breeds[index]['power_fuel'] + "\n"),
-                                  new Text("Daily Workout: " + breeds[index]['daily_workout'] + "\n"),
-                                  new Text("Common Ailments: " + breeds[index]['common_ailments'] + "\n"),
-                                  new Text("Speciality: " + breeds[index]['speciality'] + "\n"),
-                                  new Text("Annoying Habits: " + breeds[index]['annoying_habits'] + "\n"),
-                                  new Text("Special Appearance: " + breeds[index]['special_appearance'] + "\n\n"),
-
-
-
-                                  new RaisedButton(
-                                    child: new Text("OK"),
-                                    onPressed: () {
-                                      Navigator.of(context).pop();
-                                    },
-                                  ),
-
-                                  new RaisedButton(
-                                    child: Text("Search"),
-                                    onPressed: () {
-                                      _launchURL(URLList[index]);
-                                    },
-                                  ),
-
-                                  new Text("Want to see what I look like? Search!!",
-                                    style: TextStyle(
-                                        fontSize: 12
-                                    ),
-                                  ),
-
-                                  Padding(
-                                    padding: EdgeInsets.only(top:50, left: 50, right: 50),
-                                  ),
-
-                                ],
+                                ),
                               ),
                             ),
                           );
