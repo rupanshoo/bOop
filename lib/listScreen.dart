@@ -34,7 +34,6 @@ class listScreen extends StatelessWidget {
 
 
 
-
 class ListViewBuilder extends StatefulWidget {
   @override
   _ListViewBuilderState createState() => _ListViewBuilderState();
@@ -73,7 +72,7 @@ class _ListViewBuilderState extends State<ListViewBuilder> {
                             ),
                           ),
                           Spacer(),
-                          Icon(Icons.pets, color: Colors.white),
+                          Icon(Icons.pets, color: Colors.cyan),
                           Padding(
                             padding: EdgeInsets.only(top:50, bottom: 50),
                           ),

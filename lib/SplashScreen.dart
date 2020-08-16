@@ -82,7 +82,7 @@ class _SplashState extends State<Splash>
                             "bOop",
                             style: TextStyle(
                               color: Colors.white,
-                              fontSize: 24,
+                              fontSize: 32,
                               fontWeight: FontWeight.bold,
                                 fontFamily: 'LibreBaskerville',
                             ),

@@ -71,7 +71,7 @@ class _infoState extends State<info> {
         Center(
           child: Container(
             margin: EdgeInsets.all(30),
-            padding: EdgeInsets.only(top: 30, left: 30, bottom: 30, right: 30),
+            padding: EdgeInsets.only(top: 20, left: 10, bottom: 10, right: 20),
             decoration: BoxDecoration(
               color: Color(0xff622F74),
               borderRadius: BorderRadius.circular(10),
@@ -86,12 +86,11 @@ class _infoState extends State<info> {
             child: Text(
               'Planning on getting a dog?\n'
                   'Know more about your doggo from bOop!\n'
-                  'You get access to information about your dog - powers, fuel and special needs!\n'
+                  "You get access to information about your dog's needs!\n"
                   'bOop also provides you with a plethora of names for your doggie!\n'
                   'This app helps you to get to know your dog better!\n'
-                  '\nCompliments or Complaints? Contact the Developer!',
+                  '\nCompliments or Complaints? Contact the Dev!',
               style: TextStyle(
-                fontSize: 18,
                 color: Colors.white,
                 backgroundColor: Color(0xff622F74),
               ),

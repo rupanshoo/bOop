@@ -122,14 +122,18 @@ class _gridState extends State<grid> {
                           child: Center(
                             child: Column(
                               children: <Widget>[
-                                Text("    ",
-                                  style: TextStyle(fontSize: 12),),
-                                Icon(Icons.pets,
-                                  size: 50,
-                                  color: Colors.cyan,),
+                                //Text("    ",
+                                  //style: TextStyle(fontSize: 12),),
+                                FittedBox(
+                                  fit: BoxFit.cover,
+                                  child: Icon(Icons.pets,
+                                    size: 50,
+                                    color: Colors.cyan,),
+                                ),
 
-                                Text("    ",
-                                  style: TextStyle(fontSize: 12),),
+
+                                //Text("    ",
+                                  //style: TextStyle(fontSize: 12),),
 
                                 new Text(breeds[index]['name'],
                                   style: TextStyle(
@@ -156,7 +160,8 @@ class _gridState extends State<grid> {
                                 color: Colors.cyan,
                                 borderRadius: BorderRadius.circular(10),
                               ),
-                              height: 620,
+                              width: MediaQuery.of(context).size.width*0.8,
+                              height: MediaQuery.of(context).size.height*0.8,
                               margin: EdgeInsets.only(left: 5, right:5, top: 5, bottom: 5),
                               child: Column(
                                 children: <Widget>[
