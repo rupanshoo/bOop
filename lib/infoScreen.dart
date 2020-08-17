@@ -17,7 +17,7 @@ class infoScreen extends StatelessWidget {
               style: TextStyle(
                 fontFamily: 'LibreBaskerville',
                 fontWeight: FontWeight.bold,
-                fontSize: 20,
+                fontSize: 22,
               ),
               textAlign: TextAlign.center,
             ),
@@ -64,38 +64,46 @@ class _infoState extends State<info> {
             label: Text('Hey Dev!'),
             icon: Icon(Icons.send),
             backgroundColor: Color(0xff622F74),
+            elevation: 40,
+
+            //shape: RoundedRectangleBorder(side: BorderSide(color: Colors.pink, width: 4.0)),
           ),
         ),
 
 
         Center(
-          child: Container(
-            margin: EdgeInsets.all(30),
-            padding: EdgeInsets.only(top: 20, left: 10, bottom: 10, right: 20),
-            decoration: BoxDecoration(
-              color: Color(0xff622F74),
-              borderRadius: BorderRadius.circular(10),
-                boxShadow: [
-                  BoxShadow(
-                    offset: const Offset(3.0, 3.0),
-                    blurRadius: 5.0,
-                    spreadRadius: 2.0,
-                  ),
-                ]
-            ),
-            child: Text(
-              'Planning on getting a dog?\n'
-                  'Know more about your doggo from bOop!\n'
-                  "You get access to information about your dog's needs!\n"
-                  'bOop also provides you with a plethora of names for your doggie!\n'
-                  'This app helps you to get to know your dog better!\n'
-                  '\nCompliments or Complaints? Contact the Dev!',
-              style: TextStyle(
-                color: Colors.white,
-                backgroundColor: Color(0xff622F74),
+          child: InkWell(
+            splashColor: Colors.deepPurpleAccent,
+            child: Container(
+              margin: EdgeInsets.all(30),
+              padding: EdgeInsets.only(top: 20, left: 10, bottom: 10, right: 20),
+              decoration: BoxDecoration(
+                color: Color(0xff622F74).withOpacity(0.8),
+                borderRadius: BorderRadius.circular(10),
+                  border: Border.all(color: Colors.blueAccent),
+
+                  boxShadow: [
+                    BoxShadow(
+                      offset: const Offset(1.0, 6.0),
+                      blurRadius: 20,
+                    ),
+                  ]
               ),
-              textAlign: TextAlign.center,
+              child: Text(
+                'Planning on getting a dog?\n'
+                    'Know more about your doggo from bOop!\n'
+                    "You get access to information about your dog's needs!\n"
+                    'bOop also provides you with a plethora of names for your doggie!\n'
+                    'This app helps you to get to know your dog better!\n'
+                    '\nCompliments or Complaints? Contact the Dev!',
+                style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 18
+                ),
+                textAlign: TextAlign.center,
+              ),
             ),
+            onTap: (){},
           ),
         ),
 

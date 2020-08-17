@@ -11,7 +11,7 @@ class BoopApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,      //so that the debug banner on the top right corner doesn't show
-      theme: ThemeData(fontFamily: 'LibreBaskerville'),
+      //theme: ThemeData(fontFamily: 'LibreBaskerville'),
       // home: SplashScreen(),
       initialRoute: '/splashscreen',
       routes: {

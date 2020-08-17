@@ -1,8 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/painting.dart';
 import 'dart:convert';
-import 'package:url_launcher/url_launcher.dart';
-
+import 'package:flutter_staggered_animations/flutter_staggered_animations.dart';
 
 
 // ignore: camel_case_types
@@ -19,7 +19,7 @@ class homeScreen extends StatelessWidget {
               style: TextStyle(
                 fontFamily: 'LibreBaskerville',
                 fontWeight: FontWeight.bold,
-                fontSize: 20.0,
+                fontSize: 22.0,
               ),
             ),
           ),
@@ -81,16 +81,7 @@ class _gridState extends State<grid> {
   @override
   Widget build(BuildContext context) {
 
-    void _launchURL(String url) async{
-      if(await canLaunch(url)){
-        await launch(url);
-      }
-      else{
-        throw 'Could not launch!';
-      }
-    }
-
-
+    int columnCount = 2;
     return Scaffold(
       backgroundColor: Colors.transparent,
       body: new Container(
@@ -100,153 +91,159 @@ class _gridState extends State<grid> {
                 'json_data/DogBreedDb.json'),
             builder: (context, snapshot){
               var breeds = jsonDecode(snapshot.data.toString());
-              //print("Breeds:$breeds");
 
 
-              return new GridView.builder(
-                itemCount: breeds.length,
-                gridDelegate: new SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 3),
+              return AnimationLimiter(
+                child: GridView.builder(
+                  itemCount: breeds.length,
+                  gridDelegate: new SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2),
 
 
-                itemBuilder: (BuildContext context, int index){
-                  return new GestureDetector(
-                    child: new Card(
-                        elevation: 5.0,
-                        color: Colors.transparent,
-                        child: new Container(
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(25),
-                            color: Color(0xff622F74),
-                          ),
-                          alignment: Alignment.center,
-                          child: Padding(
-                            padding: const EdgeInsets.all(8.0),
-                            child: Center(
-                              child: Column(
-                                children: <Widget>[
-                                  //Text("    ",
-                                    //style: TextStyle(fontSize: 12),),
-                                  // Icon(Icons.pets,
-                                  //   size: 50,
-                                  //   color: Colors.cyan,),
-
-                                  SizedBox(height: 10,),
-                                  CircleAvatar(
-                                    backgroundImage: NetworkImage(
-                                      URLList[index]
+                  itemBuilder: (BuildContext context, int index){
+                    return AnimationConfiguration.staggeredGrid(
+                      position: index,
+                      duration: const Duration(milliseconds: 375),
+                      columnCount: columnCount,
+                      child: ScaleAnimation(
+                        child: FadeInAnimation(
+                          child: InkWell(
+                            splashColor: Colors.cyanAccent,
+                            child: Card(
+                              elevation: 10.0,
+                              color: Colors.transparent,
+                              child: Container(
+                                decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(25),
+                                  border: Border.all(color: Colors.blueAccent),
+                                  color: Color(0xff622F74).withOpacity(0.85),
+                                  boxShadow: <BoxShadow>[
+                                    BoxShadow(
+                                      color: Colors.black.withOpacity(0.45),
+                                      offset: Offset(1.0, 6.0),
+                                      blurRadius: 20.0,
                                     ),
-                                    radius: 22,
-
-                                  ),
-
-                                  Padding(
-                                    padding: const EdgeInsets.all(5.0),
-                                    child: Text(breeds[index]['name'],
-                                      style: TextStyle(
-                                        fontSize: 14,
-                                        color: Colors.white,
-                                      ),
-                                      textAlign: TextAlign.center,
-                                      ),
-                                  ),
-                                    
-                                ],
-                              ),
-                            ),
-                          )
-                        )
-                    ),
-
-
-
-                    onTap: (){
-                      showDialog(
-                        context: context,
-                        barrierDismissible: true,
-                        builder:(BuildContext context) {
-
-                          return Dialog(
-                            child: Container(
-                              decoration: BoxDecoration(
-                                color: Colors.cyan,
-                                borderRadius: BorderRadius.circular(10),
-                              ),
-                              width: MediaQuery.of(context).size.width*0.8,
-                              height: MediaQuery.of(context).size.height*0.8,
-                              margin: EdgeInsets.only(left: 5, right:5, top: 5, bottom: 5),
-                              child: Padding(
-                                padding: const EdgeInsets.fromLTRB(10,10,10,0),
-                                child: SingleChildScrollView(
-                                  child: Column(
-                                    children: <Widget>[
-                                      new Text("\n" + breeds[index]['name'],
-                                        style: TextStyle(
-                                          fontSize: 25,
-                                          fontWeight: FontWeight.bold,
-                                        ),
-                                      ),
-
-                                      // new Icon(
-                                      //   Icons.pets,
-                                      //   color: Colors.red,
-                                      // ),
-                                      CircleAvatar(
-                                    backgroundImage: NetworkImage(
-                                      URLList[index]
-                                    ),
-                                    radius: 40,
-                                    
-                                  ),
-
-                                      new Text("\nOrigin: " + breeds[index]['origin'] + "\n"),
-                                      new Text("Thriving Conditions: " + breeds[index]['suitable_conditions'] +"\n"),
-                                      new Text("Power Fuel: " + breeds[index]['power_fuel'] + "\n"),
-                                      new Text("Daily Workout: " + breeds[index]['daily_workout'] + "\n"),
-                                      new Text("Common Ailments: " + breeds[index]['common_ailments'] + "\n"),
-                                      new Text("Speciality: " + breeds[index]['speciality'] + "\n"),
-                                      new Text("Annoying Habits: " + breeds[index]['annoying_habits'] + "\n"),
-                                      new Text("Special Appearance: " + breeds[index]['special_appearance'] + "\n\n"),
-
-
-
-                                      new RaisedButton(
-                                        child: new Text("OK"),
-                                        onPressed: () {
-                                          Navigator.of(context).pop();
-                                        },
-                                      ),
-
-                                      new RaisedButton(
-                                        child: Text("Search"),
-                                        onPressed: () {
-                                          _launchURL(URLList[index]);
-                                        },
-                                      ),
-
-                                      new Text("Want to see what I look like? Search!!",
-                                        style: TextStyle(
-                                            fontSize: 12
-                                        ),
-                                      ),
-
-                                      Padding(
-                                        padding: EdgeInsets.only(top:50, left: 50, right: 50),
-                                      ),
-
-                                    ],
-                                  ),
+                                  ],
                                 ),
-                              ),
-                            ),
-                          );
+                                alignment: Alignment.center,
+                                child: Padding(
+                                  padding: const EdgeInsets.all(6.0),
+                                  child: Center(
+                                    child: Column(
+                                      children: <Widget>[
+
+                                        SizedBox(height: 10,),
+                                        CircleAvatar(
+                                          radius: 45,
+                                          backgroundColor: Colors.blueAccent,
+                                          child: CircleAvatar(
+                                            backgroundImage: NetworkImage(URLList[index],),
+                                            radius: 43,
+                                          ),
+                                        ),
+
+                                        Padding(
+                                          padding: const EdgeInsets.only(top: 15, left: 4, right: 4, bottom: 4),
+                                          child: Text(breeds[index]['name'],
+                                            style: TextStyle(
+                                              fontSize: 20,
+                                              color: Colors.white.withOpacity(0.85),
+                                            ),
+                                            textAlign: TextAlign.center,
+                                            ),
+                                        ),
+                                      ],
+                                    ),
+                                  ),
+                                )
+                              )
+                          ),
 
 
-                        },
-                      );
-                    },
 
-                  );
-                },
+                          onTap: (){
+                            showDialog(
+                              context: context,
+                              barrierDismissible: true,
+                              builder:(BuildContext context) {
+
+                                return Dialog(
+                                  backgroundColor: Color(0xff622F74).withOpacity(0.75),
+                                  elevation: 10,
+                                  child: InkWell(
+                                    splashColor: Colors.black,
+                                    child: Container(
+                                      decoration: BoxDecoration(
+                                        color: Colors.cyan.withOpacity(0.75),
+                                        borderRadius: BorderRadius.circular(15),
+                                      ),
+                                      width: MediaQuery.of(context).size.width*0.8,
+                                      height: MediaQuery.of(context).size.height*0.8,
+                                      margin: EdgeInsets.only(left: 5, right:5, top: 5, bottom: 5),
+                                      child: Padding(
+                                        padding: const EdgeInsets.fromLTRB(10,10,10,0),
+                                        child: SingleChildScrollView(
+                                          child: Column(
+                                            children: <Widget>[
+                                              Text("\n" + breeds[index]['name'],
+                                                style: TextStyle(
+                                                  fontSize: 25,
+                                                  fontWeight: FontWeight.bold,
+                                                  color: Colors.white.withOpacity(0.8),
+                                                ),
+                                              ),
+
+
+                                              Padding(
+                                                padding: EdgeInsets.all(5),
+                                                child: CircleAvatar(
+                                                  radius: 50,
+                                                  backgroundColor:Colors.deepPurple.withOpacity(0.85),
+                                                  child: CircleAvatar(
+                                                    radius: 48,
+                                                    backgroundImage: NetworkImage(URLList[index]),
+                                                  ),
+                                                ),
+                                              ),
+
+                                              Text("\nOrigin: " + breeds[index]['origin'] + "\n" , style: TextStyle( fontSize: 16, color: Colors.white.withOpacity(0.75),),),
+                                              Text("Thriving Conditions: " + breeds[index]['suitable_conditions'] +"\n", style: TextStyle( fontSize: 16, color: Colors.white.withOpacity(0.75),),),
+                                              Text("Power Fuel: " + breeds[index]['power_fuel'] + "\n", style: TextStyle( fontSize: 16, color: Colors.white.withOpacity(0.75),),),
+                                              Text("Daily Workout: " + breeds[index]['daily_workout'] + "\n", style: TextStyle( fontSize: 16, color: Colors.white.withOpacity(0.75),),),
+                                              Text("Common Ailments: " + breeds[index]['common_ailments'] + "\n", style: TextStyle( fontSize: 16, color: Colors.white.withOpacity(0.75),),),
+                                              Text("Speciality: " + breeds[index]['speciality'] + "\n", style: TextStyle( fontSize: 16, color: Colors.white.withOpacity(0.75),),),
+                                              Text("Annoying Habits: " + breeds[index]['annoying_habits'] + "\n", style: TextStyle( fontSize: 16, color: Colors.white.withOpacity(0.75),),),
+                                              Text("Special Appearance: " + breeds[index]['special_appearance'] + "\n\n", style: TextStyle( fontSize: 16, color: Colors.white.withOpacity(0.75),),),
+
+
+
+                                              RaisedButton(
+                                                splashColor: Colors.purple.withOpacity(0.86),
+                                                child: Text("OK"),
+                                                onPressed: () {
+                                                  Navigator.of(context).pop();
+                                                },
+                                              ),
+
+                                              Padding(
+                                                padding: EdgeInsets.only(top:50, left: 50, right: 50),
+                                              ),
+                                            ],
+                                          ),
+                                        ),
+                                      ),
+                                    ),
+                                    onTap: () {},
+                                  ),
+                                );
+                              },
+                            );
+                          },
+                        ),
+                        ),
+                      ),
+                    );
+                  },
+                ),
               );
             },
           ),
