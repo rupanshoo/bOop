@@ -60,6 +60,37 @@ flutter:
     - images/Dalmatian.jpeg
     - json_data/boopNames.json
     - json_data/DogBreedDb.json
+    - images/afador.jpg
+    - images/americanbulldog.jpg
+    - images/beagle.jpg
+    - images/bichon.jpg
+    - images/cavapoo.jpg
+    - images/Cockalier.jpg
+    - images/Dalmatian.jpeg
+    - images/deutscher.jpg
+    - images/EnglishSetter.jpg
+    - images/eurasier.jpg
+    - images/foxterrier.jpg
+    - images/frenchbulldog.jpg
+    - images/germanshepherd.jpg
+    - images/goldenretriever.jpg
+    - images/greatdanw.jpg
+    - images/havanese.jpg
+    - images/IrishWolfhound.png
+    - images/Jackapoo.jpg
+    - images/JapaneseChin.jpg
+    - images/KaiKen.jpg
+    - images/Komondor.jpg
+    - images/Labrador.jpg
+    - images/Maltese.jpg
+    - images/Pomeranian.jpg
+    - images/Poodle.jpg
+    - images/Pug.jpg
+    - images/Saintbernard.jpg
+    - images/ShibaInu.jpg
+    - images/SiberianHusky.jpg
+    - images/TexasHeeler.jpg
+    - images/ValleyBulldog.jpg
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.

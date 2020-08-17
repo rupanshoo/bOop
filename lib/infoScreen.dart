@@ -61,12 +61,11 @@ class _infoState extends State<info> {
             onPressed: () {
               _launchEmail('rupanshoo2000@gmail.com');
             },
-            label: Text('Hey Dev!'),
+            label: Text('Hey Dev!', style: TextStyle(fontWeight: FontWeight.bold),),
             icon: Icon(Icons.send),
             backgroundColor: Color(0xff622F74),
-            elevation: 40,
-
-            //shape: RoundedRectangleBorder(side: BorderSide(color: Colors.pink, width: 4.0)),
+            highlightElevation: 40,
+            shape: RoundedRectangleBorder(side: BorderSide(color: Colors.white, width: 1.75), borderRadius: BorderRadius.circular(45)),
           ),
         ),
 
