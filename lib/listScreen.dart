@@ -65,35 +65,40 @@ class _ListViewBuilderState extends State<ListViewBuilder> {
                         //verticalOffset: 50,
                         child: FadeInAnimation(
                           child: Padding(padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
-                            child: Container(
-                              decoration: BoxDecoration(
-                                border: Border.all(color: Colors.blueAccent),
-                                color: Color(0xff622F74).withOpacity(0.85),
-                                borderRadius: BorderRadius.circular(8),
-                              ),
-                              height: 50,
-                              child: Row(
-                                children: <Widget>[
-                                  Padding(
-                                    padding: const EdgeInsets.only(left: 5),
-                                      child: Text("  " + myData[index]['name'],
-                                        style: TextStyle(
-                                          color: Colors.white,
-                                          fontSize: 18.0,
+
+                            child: InkWell(
+                              splashColor: Colors.black,
+                              child: Container(
+                                decoration: BoxDecoration(
+                                  border: Border.all(color: Colors.blueAccent),
+                                  color: Color(0xff622F74).withOpacity(0.85),
+                                  borderRadius: BorderRadius.circular(8),
+                                ),
+                                height: 50,
+                                child: Row(
+                                  children: <Widget>[
+                                    Padding(
+                                      padding: const EdgeInsets.only(left: 5),
+                                        child: Text("  " + myData[index]['name'],
+                                          style: TextStyle(
+                                            color: Colors.white,
+                                            fontSize: 18.0,
+                                      ),
                                     ),
                                   ),
-                                ),
-                                Spacer(),
-                                Padding(
-                                  padding: const EdgeInsets.only(right: 8.0),
-                                  child: Icon(Icons.pets, color: Colors.cyan),
-                                ),
-                                Padding(
-                                  padding: EdgeInsets.only(top:50, bottom: 50),
-                                ),
-                              ],
+                                  Spacer(),
+                                  Padding(
+                                    padding: const EdgeInsets.only(right: 8.0),
+                                    child: Icon(Icons.pets, color: Colors.cyan),
+                                  ),
+                                  Padding(
+                                    padding: EdgeInsets.only(top:50, bottom: 50),
+                                  ),
+                                ],
+                              ),
                             ),
-                          ),
+                              onTap: () {},
+                            ),
                         ),
                       )
                       ),
