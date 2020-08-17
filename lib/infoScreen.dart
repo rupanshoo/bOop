@@ -94,13 +94,14 @@ class _infoState extends State<info> {
                     "You get access to information about your dog's needs!\n"
                     'bOop also provides you with a plethora of names for your doggie!\n'
                     'This app helps you to get to know your dog better!\n'
-                    '\nCompliments or Complaints? Contact the Dev!',
+                    '\nCompliments or Complaints? Contact the Dev!\n',
                 style: TextStyle(
                   color: Colors.white.withOpacity(0.85),
                   fontSize: 18
                 ),
                 textAlign: TextAlign.center,
               ),
+
             ),
             onTap: (){},
           ),

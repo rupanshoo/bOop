@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'dart:async';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 
@@ -82,7 +83,7 @@ class _SplashState extends State<Splash>
                             "bOop",
                             style: TextStyle(
                               color: Colors.white,
-                              fontSize: 32,
+                              fontSize: 28,
                               fontWeight: FontWeight.bold,
                                 fontFamily: 'LibreBaskerville',
                             ),
@@ -94,11 +95,12 @@ class _SplashState extends State<Splash>
                                 color: Colors.white,
                                 fontSize: 16
                             ),
-                          )
+                          ),
 
                         ],
                       ),
                     ),
+
                 ],
               )
             ],
