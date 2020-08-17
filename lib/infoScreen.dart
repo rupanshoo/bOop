@@ -96,7 +96,7 @@ class _infoState extends State<info> {
                     'This app helps you to get to know your dog better!\n'
                     '\nCompliments or Complaints? Contact the Dev!',
                 style: TextStyle(
-                  color: Colors.white,
+                  color: Colors.white.withOpacity(0.85),
                   fontSize: 18
                 ),
                 textAlign: TextAlign.center,

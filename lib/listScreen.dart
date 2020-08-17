@@ -70,7 +70,7 @@ class _ListViewBuilderState extends State<ListViewBuilder> {
                               splashColor: Colors.black,
                               child: Container(
                                 decoration: BoxDecoration(
-                                  border: Border.all(color: Colors.blueAccent),
+                                  border: Border.all(color: Colors.blueAccent, width: 2.75),
                                   color: Color(0xff622F74).withOpacity(0.85),
                                   borderRadius: BorderRadius.circular(8),
                                 ),

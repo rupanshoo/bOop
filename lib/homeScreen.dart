@@ -46,7 +46,7 @@ class _gridState extends State<grid> {
 
   List URLList = ['images/afador.jpg', 'images/americanbulldog.jpg', 'images/beagle.jpg', 'images/bichon.jpg',
     'images/cavapoo.jpg', 'images/Cockalier.jpg', 'images/Dalmatian.jpeg', 'images/deutscher.jpg',
-    'images/EnglishSetter.jpg', 'images/eurasier.jpg', 'images/foxterrier.jpg', 'images/frenchbulldog.jpg',
+    'images/EnglishSetter.jpg', 'images/eurasier.jpg', 'images/frenchbulldog.jpg', 'images/foxterrier.jpg',
     'images/germanshepherd.jpg',  'images/greatdanw.jpg', 'images/goldenretriever.jpg', 'images/havanese.jpg',
     'images/IrishWolfhound.png', 'images/Jackapoo.jpg', 'images/JapaneseChin.jpg', 'images/KaiKen.jpg', 'images/Komondor.jpg',
     'images/Labrador.jpg', 'images/Maltese.jpg',  'images/Poodle.jpg', 'images/Pug.jpg', 'images/Pomeranian.jpg',
@@ -91,7 +91,7 @@ class _gridState extends State<grid> {
                               child: Container(
                                 decoration: BoxDecoration(
                                   borderRadius: BorderRadius.circular(25),
-                                  border: Border.all(color: Colors.blueAccent),
+                                  border: Border.all(color: Colors.blueAccent, width: 2.75),
                                   color: Color(0xff622F74).withOpacity(0.85),
                                   boxShadow: <BoxShadow>[
                                     BoxShadow(
@@ -165,6 +165,7 @@ class _gridState extends State<grid> {
                                                 style: TextStyle(
                                                   fontSize: 25,
                                                   fontWeight: FontWeight.bold,
+                                                  fontStyle: FontStyle.italic,
                                                   color: Colors.white.withOpacity(0.8),
                                                 ),
                                               ),
@@ -182,14 +183,14 @@ class _gridState extends State<grid> {
                                                 ),
                                               ),
 
-                                              Text("\nOrigin: " + breeds[index]['origin'] + "\n" , style: TextStyle( fontSize: 16, color: Colors.white.withOpacity(0.75),),),
-                                              Text("Thriving Conditions: " + breeds[index]['suitable_conditions'] +"\n", style: TextStyle( fontSize: 16, color: Colors.white.withOpacity(0.75),),),
-                                              Text("Power Fuel: " + breeds[index]['power_fuel'] + "\n", style: TextStyle( fontSize: 16, color: Colors.white.withOpacity(0.75),),),
-                                              Text("Daily Workout: " + breeds[index]['daily_workout'] + "\n", style: TextStyle( fontSize: 16, color: Colors.white.withOpacity(0.75),),),
-                                              Text("Common Ailments: " + breeds[index]['common_ailments'] + "\n", style: TextStyle( fontSize: 16, color: Colors.white.withOpacity(0.75),),),
-                                              Text("Speciality: " + breeds[index]['speciality'] + "\n", style: TextStyle( fontSize: 16, color: Colors.white.withOpacity(0.75),),),
-                                              Text("Annoying Habits: " + breeds[index]['annoying_habits'] + "\n", style: TextStyle( fontSize: 16, color: Colors.white.withOpacity(0.75),),),
-                                              Text("Special Appearance: " + breeds[index]['special_appearance'] + "\n\n", style: TextStyle( fontSize: 16, color: Colors.white.withOpacity(0.75),),),
+                                              Text("\nOrigin: " + breeds[index]['origin'] + "\n" , style: TextStyle( fontSize: 16, color: Colors.white.withOpacity(0.7), fontWeight: FontWeight.bold), textAlign: TextAlign.center,),
+                                              Text("Thriving Conditions: " + breeds[index]['suitable_conditions'] +"\n", style: TextStyle( fontSize: 16, color: Colors.white.withOpacity(0.7),fontWeight: FontWeight.bold),textAlign: TextAlign.center,),
+                                              Text("Power Fuel: " + breeds[index]['power_fuel'] + "\n", style: TextStyle( fontSize: 16, color: Colors.white.withOpacity(0.7),fontWeight: FontWeight.bold),textAlign: TextAlign.center,),
+                                              Text("Daily Workout: " + breeds[index]['daily_workout'] + "\n", style: TextStyle( fontSize: 16, color: Colors.white.withOpacity(0.7),fontWeight: FontWeight.bold),textAlign: TextAlign.center,),
+                                              Text("Common Ailments: " + breeds[index]['common_ailments'] + "\n", style: TextStyle( fontSize: 16, color: Colors.white.withOpacity(0.7),fontWeight: FontWeight.bold),textAlign: TextAlign.center,),
+                                              Text("Speciality: " + breeds[index]['speciality'] + "\n", style: TextStyle( fontSize: 16, color: Colors.white.withOpacity(0.7),fontWeight: FontWeight.bold),textAlign: TextAlign.center,),
+                                              Text("Annoying Habits: " + breeds[index]['annoying_habits'] + "\n", style: TextStyle( fontSize: 16, color: Colors.white.withOpacity(0.7),fontWeight: FontWeight.bold),textAlign: TextAlign.center,),
+                                              Text("Special Appearance: " + breeds[index]['special_appearance'] + "\n\n", style: TextStyle( fontSize: 16, color: Colors.white.withOpacity(0.7),fontWeight: FontWeight.bold),textAlign: TextAlign.center,),
 
 
 
