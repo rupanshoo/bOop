@@ -2,8 +2,8 @@ import 'dart:convert';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-import 'package:flutter_staggered_animations/flutter_staggered_animations.dart';
-
+import 'package:boop_app/NamedList.dart';
+import 'List.dart';
 
 
 // ignore: camel_case_types
@@ -43,6 +43,8 @@ class ListViewBuilder extends StatefulWidget {
 
 class _ListViewBuilderState extends State<ListViewBuilder> {
 
+List data;
+
   @override
   Widget build(BuildContext context) {
 
@@ -50,71 +52,29 @@ class _ListViewBuilderState extends State<ListViewBuilder> {
       backgroundColor: Colors.transparent,
       body: new Container(
         child: Center(
-          child: FutureBuilder(builder: (context, snapshot) {
-              //Decode json
-              var myData = json.decode(snapshot.data.toString());
-
-                return AnimationLimiter(
-                  child: ListView.builder(
-
-                  itemBuilder: (BuildContext context, int index){
-
-                    return AnimationConfiguration.staggeredList(
-                      position: index,
-                      duration: const Duration(milliseconds: 375),
-                      child: ScaleAnimation(
-                        //verticalOffset: 50,
-                        child: FadeInAnimation(
-                          child: Padding(padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
-
-                            child: InkWell(
-                              splashColor: Colors.black,
-                              child: Container(
-                                decoration: BoxDecoration(
-                                  border: Border.all(color: Colors.blueAccent, width: 2.75),
-                                  color: Color(0xff622F74).withOpacity(0.85),
-                                  borderRadius: BorderRadius.circular(8),
-                                ),
-                                height: 50,
-                                child: Row(
-                                  children: <Widget>[
-                                    Padding(
-                                      padding: const EdgeInsets.only(left: 5),
-                                        child: Text("  " + myData[index]['name'],
-                                          style: TextStyle(
-                                            color: Colors.white,
-                                            fontSize: 18.0,
-                                      ),
-                                    ),
-                                  ),
-                                  Spacer(),
-                                  Padding(
-                                    padding: const EdgeInsets.only(right: 8.0),
-                                    child: Icon(Icons.pets, color: Colors.cyan),
-                                  ),
-                                  Padding(
-                                    padding: EdgeInsets.only(top:50, bottom: 50),
-                                  ),
-                                ],
-                              ),
-                            ),
-                              onTap: () {},
-                            ),
-                        ),
-                      )
-                      ),
-                    );
-                  },
-                  itemCount: myData.length,
-                ),
-                );
-            }, future: DefaultAssetBundle.of(context).loadString('json_data/boopNames.json')
-
+          child: FutureBuilder(
+              future: DefaultAssetBundle.of(context).loadString('json_data/boopNames.json'),
+              builder: (context, snapshot) {
+                List<NamedList> doggoNames = parseJosn(
+                    snapshot.data.toString());
+                return !doggoNames.isEmpty
+                    ? new BoopList(BoopName: doggoNames)
+                    : new Center (child: CircularProgressIndicator());
+              },
           ),
         ),
       ),
     );
   }
+
+  List<NamedList> parseJosn(String response){
+    if(response == null){
+      return[];
+    }
+    final parsed = json.decode(response.toString()).cast<Map<String, dynamic>>();
+    return parsed.map<NamedList>((json) => new NamedList.fromJson(json)).toList();
+  }
+
 }
 
 
