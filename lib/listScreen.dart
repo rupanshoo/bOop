@@ -57,15 +57,15 @@ List data;
               builder: (context, snapshot) {
                 List<NamedList> doggoNames = parseJosn(
                     snapshot.data.toString());
-                return !doggoNames.isEmpty
-                    ? new BoopList(BoopName: doggoNames)
-                    : new Center (child: CircularProgressIndicator());
+                return !doggoNames.isEmpty ? new BoopList(BoopName: doggoNames) : new Center (child: CircularProgressIndicator());
               },
           ),
         ),
       ),
     );
   }
+
+
 
   List<NamedList> parseJosn(String response){
     if(response == null){

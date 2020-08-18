@@ -1,3 +1,5 @@
+//for getting names from json file and make a list
+
 class NamedList{
   final String name;
 

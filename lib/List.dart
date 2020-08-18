@@ -9,6 +9,7 @@ class BoopList extends StatelessWidget {
   BoopList({Key key, this.BoopName}) : super(key:key);
 
 
+
   @override
   Widget build(BuildContext context) {
     return AnimationLimiter(
@@ -16,6 +17,8 @@ class BoopList extends StatelessWidget {
 
         itemCount: BoopName == null ? 0 : BoopName.length,
         itemBuilder: (BuildContext context, int index){
+
+          BoopName.shuffle(); //to shuffle names
 
           return AnimationConfiguration.staggeredList(
             position: index,
