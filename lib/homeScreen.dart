@@ -119,7 +119,7 @@ class _gridState extends State<grid> {
                                         ),
 
                                         Padding(
-                                          padding: const EdgeInsets.only(top: 15, left: 4, right: 4, bottom: 4),
+                                          padding: const EdgeInsets.only(top: 8, left: 4, right: 4, bottom: 4),
                                           child: Text(breeds[index]['name'],
                                             style: TextStyle(
                                               fontSize: 20,
@@ -174,28 +174,38 @@ class _gridState extends State<grid> {
                                               Padding(
                                                 padding: EdgeInsets.all(5),
                                                 child: CircleAvatar(
-                                                  radius: 50,
+                                                  radius: 55,
                                                   backgroundColor:Colors.deepPurple.withOpacity(0.85),
                                                   child: CircleAvatar(
-                                                    radius: 48,
+                                                    radius: 53,
                                                     backgroundImage: AssetImage(URLList[index]),
                                                   ),
                                                 ),
                                               ),
 
-                                              Text("\nOrigin: " + breeds[index]['origin'] + "\n" , style: TextStyle( fontSize: 16, color: Colors.white.withOpacity(0.7), fontWeight: FontWeight.bold), textAlign: TextAlign.center,),
-                                              Text("Thriving Conditions: " + breeds[index]['suitable_conditions'] +"\n", style: TextStyle( fontSize: 16, color: Colors.white.withOpacity(0.7),fontWeight: FontWeight.bold),textAlign: TextAlign.center,),
-                                              Text("Power Fuel: " + breeds[index]['power_fuel'] + "\n", style: TextStyle( fontSize: 16, color: Colors.white.withOpacity(0.7),fontWeight: FontWeight.bold),textAlign: TextAlign.center,),
-                                              Text("Daily Workout: " + breeds[index]['daily_workout'] + "\n", style: TextStyle( fontSize: 16, color: Colors.white.withOpacity(0.7),fontWeight: FontWeight.bold),textAlign: TextAlign.center,),
-                                              Text("Common Ailments: " + breeds[index]['common_ailments'] + "\n", style: TextStyle( fontSize: 16, color: Colors.white.withOpacity(0.7),fontWeight: FontWeight.bold),textAlign: TextAlign.center,),
-                                              Text("Speciality: " + breeds[index]['speciality'] + "\n", style: TextStyle( fontSize: 16, color: Colors.white.withOpacity(0.7),fontWeight: FontWeight.bold),textAlign: TextAlign.center,),
-                                              Text("Annoying Habits: " + breeds[index]['annoying_habits'] + "\n", style: TextStyle( fontSize: 16, color: Colors.white.withOpacity(0.7),fontWeight: FontWeight.bold),textAlign: TextAlign.center,),
-                                              Text("Special Appearance: " + breeds[index]['special_appearance'] + "\n\n", style: TextStyle( fontSize: 16, color: Colors.white.withOpacity(0.7),fontWeight: FontWeight.bold),textAlign: TextAlign.center,),
+                                              Text("\nOrigin: " , style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16, color: Colors.white.withOpacity(0.7),)),
+                                              Text(breeds[index]['origin'] + "\n" , style: TextStyle( fontSize: 16, color: Colors.white.withOpacity(0.7),), textAlign: TextAlign.center,),
+                                              Text("Thriving Conditions: " , style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16, color: Colors.white.withOpacity(0.7),)),
+                                              Text(breeds[index]['suitable_conditions'] +"\n", style: TextStyle( fontSize: 16, color: Colors.white.withOpacity(0.7),),textAlign: TextAlign.center,),
+                                              Text("Power Fuel: " , style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16, color: Colors.white.withOpacity(0.7),)),
+                                              Text(breeds[index]['power_fuel'] + "\n", style: TextStyle( fontSize: 16, color: Colors.white.withOpacity(0.7),),textAlign: TextAlign.center,),
+                                              Text("Daily Workout: " , style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16, color: Colors.white.withOpacity(0.7),)),
+                                              Text(breeds[index]['daily_workout'] + "\n", style: TextStyle( fontSize: 16, color: Colors.white.withOpacity(0.7),),textAlign: TextAlign.center,),
+                                              Text("Common Ailments: " , style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16, color: Colors.white.withOpacity(0.7),)),
+                                              Text(breeds[index]['common_ailments'] + "\n", style: TextStyle( fontSize: 16, color: Colors.white.withOpacity(0.7),),textAlign: TextAlign.center,),
+                                              Text("Speciality: " , style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16, color: Colors.white.withOpacity(0.7),)),
+                                              Text(breeds[index]['speciality'] + "\n", style: TextStyle( fontSize: 16, color: Colors.white.withOpacity(0.7),),textAlign: TextAlign.center,),
+                                              Text("Annoying Habits: " , style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16, color: Colors.white.withOpacity(0.7),)),
+                                              Text(breeds[index]['annoying_habits'] + "\n", style: TextStyle( fontSize: 16, color: Colors.white.withOpacity(0.7),),textAlign: TextAlign.center,),
+                                              Text("Special Appearance: " , style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16, color: Colors.white.withOpacity(0.7),)),
+                                              Text(breeds[index]['special_appearance'] + "\n\n", style: TextStyle( fontSize: 16, color: Colors.white.withOpacity(0.7),),textAlign: TextAlign.center,),
 
 
 
                                               RaisedButton(
                                                 splashColor: Colors.purple.withOpacity(0.86),
+                                                hoverColor: Colors.purple.withOpacity(0.86),
+
                                                 child: Text("OK"),
                                                 onPressed: () {
                                                   Navigator.of(context).pop();

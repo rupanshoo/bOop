@@ -53,6 +53,7 @@ class _ListViewBuilderState extends State<ListViewBuilder> {
           child: FutureBuilder(builder: (context, snapshot) {
               //Decode json
               var myData = json.decode(snapshot.data.toString());
+
                 return AnimationLimiter(
                   child: ListView.builder(
 
