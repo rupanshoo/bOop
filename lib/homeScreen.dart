@@ -119,7 +119,7 @@ class _gridState extends State<grid> {
                                         ),
 
                                         Padding(
-                                          padding: const EdgeInsets.only(top: 8, left: 4, right: 4, bottom: 4),
+                                          padding: const EdgeInsets.only(top: 12, left: 4, right: 4, bottom: 4),
                                           child: Text(breeds[index]['name'],
                                             style: TextStyle(
                                               fontSize: 20,
