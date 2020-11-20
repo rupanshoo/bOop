@@ -9,8 +9,9 @@ This project was made to explore different animations and UI components offered 
  - App info
  - Contact developer through the app only by email with issues, suggestions and feedback!
 
-## Tool used
+## Tools used
  - Flutter
+ - JSON
  
 ## Language used
  - Dart
