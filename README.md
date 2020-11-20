@@ -1,16 +1,30 @@
-# boop_app
+# bOop!
 
-A new Flutter application.
+A new Flutter application. 
+This project was made to explore different animations and UI components offered by flutter.
 
-## Getting Started
+## Features
+ - Info about different dog breeds from around the world
+ - 1000+ dog name suggestions - new names ever time you open the window!!
+ - App info
+ - Contact developer through the app only by email with issues, suggestions and feedback!
 
-This project is a starting point for a Flutter application.
+## Tool used
+ - Flutter
+ 
+## Language used
+ - Dart
 
-A few resources to get you started if this is your first Flutter project:
+## Future plans
+ - Add local breeds - expand database and use new tools for it.
+ - An adoption or fostering feature for dog shelter.
+ 
+# Have a look at the current version
+[bOop on Google PlayStore - version 1.0.0](https://play.google.com/store/apps/details?id=com.RupanshooSaxena.boop_app)
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+## Developer contact
+[Rupanshoo Saxena](https://github.com/rupanshoo)
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
+
+[Flutter documentation](https://flutter.dev/docs), which offers tutorials,
 samples, guidance on mobile development, and a full API reference.
